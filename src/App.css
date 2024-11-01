@@ -1,3 +1,8 @@
+
+body{
+  background-color: #f3f3f3;
+}
+
 .Mainpage, .SecondPage {
   width: 100%;
   height: 100vh;
@@ -91,4 +96,102 @@
   font-size: 14px;
   color: #333;
   opacity: 0.7;
+}
+
+.header{
+  width: 100%;
+  height: 100px;
+  background-color: #000;
+}
+
+.header h2{
+  color: #fff;
+  font-size: 6rem;
+  display: flex;
+  align-items: center;
+  width: 60%;
+}
+
+.header-in-box{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+}
+
+.menu-div{
+  width: 50%;
+}
+
+.menu-ul{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+  padding: 0 10px
+}
+
+/* 메뉴 항목 스타일 */
+.menu-ul li {
+  display: inline-block;
+  margin: 0 15px; /* 좌우 간격 설정 */
+  cursor: pointer;
+  position: relative;
+  font-size: 1.2rem; /* 폰트 크기 조정 */
+  color: #fff; /* 텍스트 색상 */
+}
+
+/* 호버 시 밑줄 애니메이션 */
+.menu-ul li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px; /* 텍스트 아래에 위치하도록 */
+  width: 0;
+  height: 2px; /* 밑줄 두께 */
+  background-color: #fff; /* 밑줄 색상 */
+  transition: width 0.3s ease; /* 애니메이션 효과 */
+}
+
+/* 호버 시 밑줄 확장 */
+.menu-ul li:hover::after {
+  width: 100%; /* 밑줄이 전체 너비로 확장 */
+}
+
+.intro-box{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1.4rem;
+  line-height: 37px;
+  margin-top: 150px;
+  font-family: 'GowunDodum-Regular';
+}
+
+.intro-text{
+  width: 60%;
+}
+
+.intro-img {
+  position: relative; /* 부모 요소를 상대적으로 설정 */
+  overflow: hidden; /* 자식 요소가 부모 요소를 넘어가지 않도록 설정 */
+  width: 530px; /* 원하는 너비 설정 */
+  height: 530px; /* 원하는 높이 설정 */
+  border-radius: 50%; /* 동그라미 형태 */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* 그림자 효과 */
+  background-color: black; /* 배경색 (흑백 효과를 위해) */
+  right: 6%;
+}
+
+.intro-img img {
+  position: absolute; /* 절대 위치 설정 */
+  top: 50%; /* 이미지 가운데 정렬 */
+  left: 50%; /* 이미지 가운데 정렬 */
+  width: 100%; /* 부모 요소의 너비를 100%로 설정 */
+  height: 100%; /* 부모 요소의 높이를 100%로 설정 */
+  object-fit: cover; /* 이미지 비율 유지 */
+  transform: translate(-50%, -50%); /* 이미지 가운데 정렬 */
+  filter: grayscale(100%); /* 흑백 효과 */
 }
